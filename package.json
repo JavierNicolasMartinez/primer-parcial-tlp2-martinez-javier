@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "node app.js"
+    "dev": "node --watch app.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -19,5 +18,18 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
-  }
+  },
+  "description": "",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JavierNicolasMartinez/primer-parcial-tlp2-martinez-javier.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JavierNicolasMartinez/primer-parcial-tlp2-martinez-javier/issues"
+  },
+  "homepage": "https://github.com/JavierNicolasMartinez/primer-parcial-tlp2-martinez-javier#readme"
 }
