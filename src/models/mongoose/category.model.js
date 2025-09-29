@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose";
+import { AssetModel } from "../sequelize/asset.model.js";
 
 // TODO: configurar el virtuals para el populate inverso con assets
 
@@ -17,6 +18,19 @@ const CategorySchema = new Schema(
 );
 
 // ! FALTA COMPLETAR ACA
+CategorySchema.pre("findOneAndDelete", async function (next) {
+  const category = await this.model.findOne(this.getFilter());
+
+  if (category) {
+    await AssetModel.updateMany(
+      { categories: category._id },
+      { $pull: { categories: category._id } }
+    );
+  }
+
+  next();
+});
+
 CategorySchema.virtual("assets", {
   ref: "Asset",
   localField: "_id",

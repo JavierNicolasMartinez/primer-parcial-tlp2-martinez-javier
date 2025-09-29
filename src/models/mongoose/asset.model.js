@@ -1,5 +1,6 @@
 import { Schema, model } from "mongoose";
 
+
 // TODO: completar relaciones embebidas y referenciadas
 
 const AssetSchema = new Schema(
@@ -35,5 +36,6 @@ const AssetSchema = new Schema(
   },
   { timestamps: true }
 );
+
 
 export const AssetModel = model("Asset", AssetSchema);
