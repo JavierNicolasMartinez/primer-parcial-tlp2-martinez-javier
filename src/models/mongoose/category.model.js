@@ -1,5 +1,6 @@
 import { Schema, model } from "mongoose";
-import { AssetModel } from "../sequelize/asset.model.js";
+// import { AssetModel } from "./asset.model";
+
 
 // TODO: configurar el virtuals para el populate inverso con assets
 
